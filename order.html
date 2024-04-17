@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Medicines</title>
+    <style>
+      /* Style for the card container */
+      .card {
+        width: 300px;
+        margin: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-color: #fff;
+        display: flex;
+      }
+
+      /* Style for the card image */
+
+      /* Style for the card content */
+      .card-content {
+        padding: 6px;
+      }
+
+      /* Style for the card name */
+      .card-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+
+      /* Style for the card price */
+      .card-price {
+        font-size: 16px;
+        color: #888;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: -webkit-linear-gradient(to top, #a8e063, #56ab2f);
+        background: linear-gradient(to top, #a8e063, #56ab2f);
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100vh;
+      }
+      .container {
+        padding-top: 40px;
+        width: 650px;
+        height: 650px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+      }
+      .medicine {
+        width: 120px;
+        height: 120px;
+      }
+      h1 {
+        color: white;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .search-container {
+        margin: 10px;
+        width: auto;
+        display: flex;
+      }
+
+      #medicineSearch {
+        width: 450px;
+        height: 30px;
+        padding: 5px 12px;
+        border: none;
+        border: 1px solid gray;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+      }
+      .srchBtn {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border: none;
+        border: 1px solid gray;
+      }
+      .a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: green;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 1s ease;
+      }
+
+      /* Hover effect */
+      .a:hover {
+        background-color: #0056b3;
+      }
+      ul {
+        display: flex;
+        gap: 1rem;
+      }
+      li {
+        list-style: none;
+      }
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin: auto 1px;
+      }
+      p {
+        color: azure;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .image {
+        text-align: center;
+        width: 140px;
+        height: 140px;
+        margin: 1px auto;
+      }
+
+      .medicine-results {
+        max-width: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <a href="main.html"><img src="./assets/logo.jpg" alt="" /></a>
+      <nav>
+        <ul>
+          <li><a href="order.html" class="a">Order Medicine</a></li>
+          <li><a href="appoint.html" class="a">Book Appointment</a></li>
+          <li><a href="emergency.html" class="a">Emergency Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Search for Medicines</h1>
+      <div class="search-container">
+        <input
+          type="text"
+          id="medicineSearch"
+          placeholder="Search for medicines..."
+        />
+        <button onclick="searchMedicine()" class="srchBtn">Search</button>
+      </div>
+      <div id="medicineResults" class="medicine-results">
+        <div class="card">
+          <img
+            src="./assets/WhatsApp Image 2024-04-18 at 02.18.24_eaab3c40.jpg"
+            alt="Product Image"
+            class="image"
+          />
+          <div class="card-content">
+            <h2 class="card-name">Azitromycin Sandoz</h2>
+            <p class="card-price">Rs. 299.99</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/WhatsApp Image 2024-04-18 at 02.03.45_63cba91f.jpg" alt="Product Image" class="image" />
+          <div class="card-content">
+            <h2 class="card-name">Sinarest Capsule</h2>
+            <p class="card-price">Rs. 35.99</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/WhatsApp Image 2024-04-18 at 02.19.26_6140be40.jpg"
+            alt="Product Image"
+            class="image"
+          />
+          <div class="card-content">
+            <h2 class="card-name">Rinifol Capsule</h2>
+            <p class="card-price">Rs. 49.99</p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/WhatsApp Image 2024-04-18 at 02.20.05_70775662.jpg"
+            class="image"
+          />
+          <div class="card-content">
+            <h2 class="card-name">Paracetamol Tablet</h2>
+            <p class="card-price">Rs. 199.99</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
